@@ -16,7 +16,7 @@ public class Anmelden implements CommandExecutor
            
             	Player target = Main.getPlugin().getServer().getPlayer(args[0]);
                 if (target != null) {
-                  if(!Main.Angemeldet.contains(target)) {
+                  //if(!Main.Angemeldet.contains(target)) {
                 	  if(!(Main.stopped == false && Main.starting == false)) {
                 		  Main.Angemeldet.add(target);
                     	  p.sendMessage(Main.pr + "§cSpieler hinzugefügt: §f"+target.getName());
@@ -24,9 +24,9 @@ public class Anmelden implements CommandExecutor
 
                     	  p.sendMessage(Main.pr + "§cEs läuft grade eine Runde.!");
                 	  }
-                  }else {
-                	  p.sendMessage(Main.pr + "§cDer Spieler ist schon angemeldet.");
-                  }
+                  //}else {
+                //	  p.sendMessage(Main.pr + "§cDer Spieler ist schon angemeldet.");
+                 // }
                 }
                 
                 else {

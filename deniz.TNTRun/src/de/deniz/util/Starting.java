@@ -40,9 +40,9 @@ public class Starting {
 								Main.stopped = false;
 								Main.starting = false;
 								player.sendMessage(Main.pr + "§6GO!");
-								player.setGameMode(GameMode.ADVENTURE);
 
 								if (Main.Angemeldet.contains(player)) {
+									player.setGameMode(GameMode.ADVENTURE);
 									Main.Living.add(player);
 								}
 

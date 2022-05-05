@@ -71,10 +71,7 @@ public class ImportantList implements Listener {
 			event.getPlayer().sendMessage("/anmelden [Spieler]: Füge einen User als Spieler hinzu (Admins)");
 			event.getPlayer().sendMessage("§e------Help-Commands Page 1------");
 
-		} /*
-			 * else if(event.getMessage().toLowerCase().startsWith("/stop")) {
-			 * event.setCancelled(true); Bukkit.getServer().shutdown(); }
-			 */
+		} 
 	}
 
 	@EventHandler
@@ -147,7 +144,7 @@ public class ImportantList implements Listener {
 
 	@EventHandler
 	public void PlayerDamageBeforeStart(final EntityDamageEvent e) {
-		if (Main.stopped) {
+		if (Main.stopped == false && Main.starting) {
 			e.setCancelled(true);
 		}
 	}
