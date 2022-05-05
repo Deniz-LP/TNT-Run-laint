@@ -24,6 +24,7 @@ public class Main extends JavaPlugin {
 	public static String np;
 	public static String nf;
 	public static String Publisher;
+	public static String Admin;
 	public static ArrayList<Player> Living;
 	public static ArrayList<Player> Dead;
 	public static ArrayList<Player> OnlinePlayer;
@@ -39,6 +40,7 @@ public class Main extends JavaPlugin {
 		Main.np = String.valueOf(String.valueOf(Main.pr)) + "§4§lDazu hast du keine Rechte.";
 		Main.nf = String.valueOf(String.valueOf(Main.pr)) + "§c§lSpieler wurde nicht gefunden.";
 		Main.Publisher = "Deniz_LP";
+		Main.Admin = "LAINTIME";
 		Main.Living = new ArrayList<Player>();
 		Main.Dead = new ArrayList<Player>();
 		Main.OnlinePlayer = new ArrayList<Player>();

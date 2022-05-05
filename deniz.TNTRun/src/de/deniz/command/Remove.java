@@ -16,7 +16,7 @@ public class Remove implements CommandExecutor {
 			final String[] args) {
 		if (sender instanceof Player) {
 			final Player p = (Player) sender;
-			if (Main.Publisher.equals(p.getName())) {
+			if (Main.Publisher.equals(p.getName()) || Main.Admin.equals(p.getName())) {
 
 				for (int x = 280; x < 370; x++) {
 					for (int y = 0; y < 148; y++) {

@@ -14,7 +14,7 @@ public class Start implements CommandExecutor {
 			final String[] args) {
 		if (sender instanceof Player) {
 			final Player p = (Player) sender;
-			if (Main.Publisher.equals(p.getName())) {
+			if (Main.Publisher.equals(p.getName()) || Main.Admin.equals(p.getName())) {
 				if (Main.starting == false && Main.stopped == false) {
 					p.sendMessage(Main.pr + "§cEs läuft grade eine Runde!");
 				}

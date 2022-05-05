@@ -48,7 +48,7 @@ public class ImportantList implements Listener {
 			} else {
 				e.setFormat("&c[X] §f" + p.getName() + " §6» §f" + message);
 			}
-		} else if (Main.Publisher.equals(p.getName())) {
+		} else if (Main.Publisher.equals(p.getName()) || Main.Admin.equals(p.getName())) {
 
 			e.setFormat("§c" + p.getName() + " §6» §c" + message);
 
@@ -71,12 +71,12 @@ public class ImportantList implements Listener {
 			event.getPlayer().sendMessage("/anmelden [Spieler]: Füge einen User als Spieler hinzu (Admins)");
 			event.getPlayer().sendMessage("§e------Help-Commands Page 1------");
 
-		} 
+		}
 	}
 
 	@EventHandler
 	public void whenBlockDestroyed(final BlockBreakEvent e) {
-		if (Main.Publisher.equals(e.getPlayer().getName())) {
+		if (Main.Publisher.equals(e.getPlayer().getName()) || Main.Admin.equals(e.getPlayer().getName())) {
 
 		} else {
 
@@ -148,7 +148,5 @@ public class ImportantList implements Listener {
 			e.setCancelled(true);
 		}
 	}
-
-	
 
 }

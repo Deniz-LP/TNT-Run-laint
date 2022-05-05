@@ -13,10 +13,11 @@ public class Anmelden implements CommandExecutor
     public boolean onCommand(final CommandSender sender, final Command command, final String label, final String[] args) {
         if (sender instanceof Player) {
             final Player p = (Player)sender;
-           
+
+			if (Main.Publisher.equals(p.getName()) || Main.Admin.equals(p.getName())) {
             	Player target = Main.getPlugin().getServer().getPlayer(args[0]);
                 if (target != null) {
-                  //if(!Main.Angemeldet.contains(target)) {
+                  if(!Main.Angemeldet.contains(target)) {
                 	  if(!(Main.stopped == false && Main.starting == false)) {
                 		  Main.Angemeldet.add(target);
                     	  p.sendMessage(Main.pr + "§cSpieler hinzugefügt: §f"+target.getName());
@@ -24,15 +25,17 @@ public class Anmelden implements CommandExecutor
 
                     	  p.sendMessage(Main.pr + "§cEs läuft grade eine Runde.!");
                 	  }
-                  //}else {
-                //	  p.sendMessage(Main.pr + "§cDer Spieler ist schon angemeldet.");
-                 // }
-                }
+                  }else {
+                	  p.sendMessage(Main.pr + "§cDer Spieler ist schon angemeldet.");
+                  }
                 
+                }
                 else {
                     p.sendMessage(Main.nf);
                 }
-            
+                }else {
+    				p.sendMessage(Main.np);
+    			}
             
         }
         else {
