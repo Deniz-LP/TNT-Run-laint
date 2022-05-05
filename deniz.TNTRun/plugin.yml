@@ -1,0 +1,10 @@
+main: de.deniz.main.Main
+name: TNTRun
+version: '1.0'
+author: Deniz
+description: test
+
+commands:
+   start:
+   anmelden:
+   remove:
